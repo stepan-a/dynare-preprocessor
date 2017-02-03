@@ -1,5 +1,5 @@
 push: build
-	rsync -avz preprocessor/ kirikou.cepremap.org:/srv/d_kirikou/www.dynare.org/preprocessor/linux
+	rsync -avz preprocessor/linux/ kirikou.cepremap.org:/srv/d_kirikou/www.dynare.org/preprocessor/linux
 	rm -rf dynare
 
 build: preprocessor/linux/64/dynare preprocessor/linux/32/dynare
