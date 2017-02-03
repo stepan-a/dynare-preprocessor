@@ -10,7 +10,7 @@ dynare/README.md:
 preprocessor/linux/64/dynare: dynare/README.md
 	mkdir -p preprocessor/linux/64
 	cd dynare && git clean -fd
-	cd dynare && autoreconf -si && ./configure --disable-octave --disable-matlab LDFLAGS='-static -static-libgcc -static-libstdc++' && cd preprocessor && make all && mkdir -p ../../preprocessor && mv dynare_m ../../preprocessor/linux/64/dynare  
+	cd dynare && autoreconf -si && ./configure --disable-octave --disable-matlab LDFLAGS='-static -static-libgcc -static-libstdc++' && cd preprocessor && make all && mkdir -p ../../preprocessor && mv dynare_m ../../preprocessor/linux/64/dynare
 
 preprocessor/linux/32/dynare: dynare/README.md
 	mkdir -p preprocessor/linux/32
