@@ -1,11 +1,13 @@
+include configuration.mk
+
 push: build
-	rsync -avz preprocessor/linux/ kirikou.cepremap.org:/srv/d_kirikou/www.dynare.org/preprocessor/linux
-	rm -rf dynare
+	rsync -avz preprocessor/linux/ $(REMOTE_SERVER)
 
 build: preprocessor/linux/64/dynare preprocessor/linux/32/dynare
+	rm -rf dynare
 
 dynare/README.md:
-	git clone --recursive --depth=1 git@github.com:DynareTeam/dynare.git
+	git clone --recursive --depth=1 -b $(GIT_BRANCH) $(GIT_REMOTE)
 
 preprocessor/linux/64/dynare: dynare/README.md
 	mkdir -p preprocessor/linux/64

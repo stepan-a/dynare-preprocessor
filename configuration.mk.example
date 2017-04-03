@@ -1,0 +1,4 @@
+GIT_REMOTE=https://github.com/DynareTeam/dynare
+GIT_BRANCH=master
+
+REMOTE_SERVER=kirikou.cepremap.org:/srv/d_kirikou/www.dynare.org/preprocessor/linux
